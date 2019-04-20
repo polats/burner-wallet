@@ -38,7 +38,7 @@ const tab = "\t\t";
 
 module.exports = {
   localContractAddress,
-  contracts:fs.readFileSync(clevisConfig.ROOT_FOLDER + "/contracts.clevis").toString().trim().split("\n"),
+  contracts:fs.readFileSync(clevisConfig.ROOT_FOLDER + "/contracts.clevis").toString().trim().split(" "),
   reload:()=>{
     describe('#reload() ', function() {
       it('should force browser to reload', async function() {

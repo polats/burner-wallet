@@ -106,6 +106,26 @@ if (window.location.hostname.indexOf("localhost") >= 0 || window.location.hostna
   }
 
 }
+else if (window.location.hostname.indexOf("192.168.99.100") >= 0 || window.location.hostname.indexOf("192.168.99.101") >= 0) {
+  XDAI_PROVIDER = "http://192.168.99.100:8545"
+  WEB3_PROVIDER = "http://192.168.99.100:8545";
+  CLAIM_RELAY = 'http://192.168.99.100:18462'
+  if(true){
+    ERC20NAME = false
+    ERC20TOKEN = false
+    ERC20IMAGE = false
+  }else{
+    ERC20NAME = 'BUFF'
+    ERC20VENDOR = 'VendingMachine'
+    ERC20TOKEN = 'ERC20Vendable'
+    ERC20IMAGE = bufficorn
+    XDAI_PROVIDER = "http://192.168.99.100:8545"
+    WEB3_PROVIDER = "http://192.168.99.100:8545";
+    LOADERIMAGE = bufficorn
+  }
+
+}
+
 else if (window.location.hostname.indexOf("s.xdai.io") >= 0) {
   WEB3_PROVIDER = POA_XDAI_NODE;
   CLAIM_RELAY = 'https://x.xdai.io'
